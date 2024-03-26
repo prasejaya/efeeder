@@ -1,0 +1,101 @@
+<!-- views/login.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/logo-dikti.png">
+    <title>Feeder UNTAG</title>
+    
+    <!-- page css -->
+    <link href="/style/css/pages/login-register-lock.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/style/css/style.css" rel="stylesheet">
+    
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+    <section id="wrapper" class="login-register login-sidebar" style="background-image:url('/images/bg-login.jpg');">
+        <div class="login-box card">
+            <div class="card-body">
+                <form class="form-horizontal form-material" id="loginform" action="/login" method="POST">
+                    <input type="hidden" name="aksilogin" value="ceklogin">
+                    <div class="text-center">
+                        <a href="javascript:void(0)" class="text-center db"><img src="/images/logo-dikti.png" alt="Home" width="60px" /><br/>
+                            <img src="/images/e-feeder-text.png" alt="Home" /><br>
+                        </a>
+                        <span style="font-size:12px;color:#0070bb;font-weight:bold">Universitas Merdeka Madiun</span>
+                    </div>
+                  
+                  
+                    <div class="form-group m-t-30">
+                        <div class="col-xs-12">
+                            <input class="form-control" name="username" type="text" required="" placeholder="Username">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input class="form-control" name="password" type="password" required="" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="form-group text-center m-t-20">
+                        <div class="col-xs-12">
+                            <button type="submit" class="btn btn-info btn-lg btn-block text-uppercase btn-rounded" type="submit">Log In</button>
+                        </div>
+                    </div>
+                    <div class="form-group m-b-0">
+                        <div class="col-sm-12 text-center">
+                            <!-- Copyright and credits -->
+                            Copyright © 2024 Universitas 17 Agustus Surabaya. <br>
+                            <a  class="text-custom-2E2E92 m-l-5"><b>TIM Pengembang SIM Berbasis TI</b></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Menggunakan Bootstrap 5 JavaScript dari folder src/bootstrap/js -->
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Preloader - style you can find in spinners.css -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">e-Feeder</p>
+        </div>
+    </div>
+    <!-- All Jquery -->
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="/popper/popper.min.js"></script>
+    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--Custom JavaScript -->
+    <script type="text/javascript">
+        $(function() {
+            $(".preloader").fadeOut();
+        });
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+        // Login and Recover Password
+        $('#to-recover').on("click", function() {
+            $("#loginform").slideUp();
+            $("#recoverform").fadeIn();
+        });
+    </script>
+    
+</body>
+</html>
